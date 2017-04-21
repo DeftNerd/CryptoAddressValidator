@@ -17,6 +17,9 @@ Currently adds a `onion` and `bitcoin` validator. Planning to add the following 
 * Ethereum addresses (only very basic)
 * Litecoin addresses
 * Monero addresses
+
+Also planning to create the following validators under another project
+
 * GPG pubkey
 * GPG signed data
 * Generic Base38 Validator
