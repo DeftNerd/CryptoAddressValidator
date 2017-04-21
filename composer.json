@@ -1,0 +1,51 @@
+{
+    "name": "deftnerd/cryptoaddressvalidator",
+    "type": "library",
+    "description": "Laravel validator for various cryptocurrency address formats",
+    "keywords": [
+        "DeftNerd",
+        "CryptoAddressValidator"
+    ],
+    "homepage": "https://github.com/DeftNerd/CryptoAddressValidator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Brown",
+            "email": "adam@deftnerd.com",
+            "homepage": "https://deftnerd.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.6|~7.0",
+        "stephenhill/base58": "^1.1",
+        "illuminate/support": "~5.1"        
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~4.0||~5.0||~6.0",
+        "squizlabs/php_codesniffer": "^2.3"        
+    },
+    "autoload": {
+        "psr-4": {
+            "DeftNerd\\CryptoAddressValidator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DeftNerd\\CryptoAddressValidator\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
