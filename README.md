@@ -45,15 +45,21 @@ DeftNerd\CryptoAddressValidator\CryptoAddressServiceProvider::class
 
 
 // Test any onion address to see if it follows the format (Base32, 16 characters, ends in '.onion')
+
+```
 Validator::make(['test' => 'facebookcorewwwi.onion'], ['test' => 'onion']); //true
 Validator::make(['test' => 'notarealonionaddress.onion'], ['test' => 'onion']); //false
 Validator::make(['test' => 'facebook.com'], ['test' => 'onion']); //false
+```
 
 // Test an address to see if it's a bitcoin address
+
+```
 Validator::make(['test' => '1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v'], ['test' => 'bitcoin']); // true (Bitcoin address)
 Validator::make(['test' => 'n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi'], ['test' => 'bitcoin']); // true (Bitcoin Testnet address)
 Validator::make(['test' => 'jsd8j8jksdjf9sj98'], ['test' => 'bitcoin']); // false
 Validator::make(['test' => 'LQ3B36Yv2rBTxdgAdYpU2UcEZsaNwXeATk'], ['test' => 'bitcoin']); // false (Litecoin address)
+```
 
 ## Change log
 
