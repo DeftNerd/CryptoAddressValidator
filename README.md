@@ -44,7 +44,8 @@ DeftNerd\CryptoAddressValidator\CryptoAddressServiceProvider::class
 ## Usage
 
 
-### Test any onion address to see if it follows the format (Base32, 16 characters, ends in '.onion')
+### Test any onion address to see if it follows the format
+Base32, 16 characters, ends in '.onion'
 
 Validator::make(['test' => 'facebookcorewwwi.onion'], ['test' => 'onion'])->passes(); //true
 
@@ -52,7 +53,8 @@ Validator::make(['test' => 'notarealonionaddress.onion'], ['test' => 'onion'])->
 
 Validator::make(['test' => 'facebook.com'], ['test' => 'onion'])->passes(); //false
 
-### Test a Bitcoin address to see if it's valid. Checks for proper Base58 encoding, tests the checksum, verifies the network prefix byte is one of (mainnet regular, mainnet p2sh, testnet regular, testnet p2sh)
+### Test a Bitcoin address to see if it's valid. 
+Checks for proper Base58 encoding, tests the checksum, verifies the network prefix byte is one of (mainnet regular, mainnet p2sh, testnet regular, testnet p2sh)
 
 Validator::make(['test' => '1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v'], ['test' => 'bitcoin'])->passes(); // true *(Bitcoin address)*
 
