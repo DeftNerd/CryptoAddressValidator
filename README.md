@@ -64,20 +64,6 @@ Validator::make(['test' => 'jsd8j8jksdjf9sj98'], ['test' => 'bitcoin'])->passes(
 
 Validator::make(['test' => 'LQ3B36Yv2rBTxdgAdYpU2UcEZsaNwXeATk'], ['test' => 'bitcoin'])->passes(); // false *(Litecoin address)*
 
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
-
 ## Security
 
 If you discover any security related issues, please email adam@deftnerd.com instead of using the issue tracker.
