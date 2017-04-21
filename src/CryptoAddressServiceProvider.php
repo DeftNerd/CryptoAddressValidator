@@ -48,6 +48,16 @@ class CryptoAddressServiceProvider extends ServiceProvider
             return (bool) array_product($conditions);
         });
 
+        // onion address validator
+        Validator::extend('onion', function ($attribute, $value, $parameters, $validator) {
+
+            $conditions = [];
+            $conditions[] = strlen($value) == 22;
+            $conditions[] = substr(strtoupper($value), -6) == ".ONION";
+            $conditions[] = preg_match('#^(?:[A-Z2-7]{8})*(?:[A-Z2-7]{2}={6}|[A-Z2-7]{4}={4}|[A-Z2-7]{5}={3}|[A-Z2-7]{7}=)?$#', substr(strtoupper($value, 0, 16)));
+
+            return (bool) array_product($conditions);
+        });
 
     }
 
